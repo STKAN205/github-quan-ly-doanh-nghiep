@@ -2,8 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/showtable', function () {
-    return view('fontend/test');
+Route::get('/', function () {
+    return view('fontend/index');
+});
+
+Route::get('/login', function () {
+    return view('fontend/login'); 
+});
+
+Route::get('/forgot', function () {
+    return view('/fontend/forgot'); 
 });
 
 #demo datatables
