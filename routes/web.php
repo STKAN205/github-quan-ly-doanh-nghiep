@@ -14,6 +14,11 @@ Route::get('/forgot', function () {
     return view('/fontend/forgot'); 
 });
 
+Route::get('/employee', function () {
+    return view('/fontend/employee'); 
+});
+
 #demo datatables
 use App\Http\Controllers\Persion_controller;
 Route::get('/dataTables/person', [Persion_controller::class, 'index']);
+
