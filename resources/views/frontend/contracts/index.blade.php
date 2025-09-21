@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ thống Quản lý Nhân sự</title>
-    <link rel="stylesheet" href="{{ asset('fontend/css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontend/css/contracts.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/contracts.css') }}">
 </head>
 <body>
     <div class="container">
         {{-- Sidebar --}}
-            @include('fontend.partials.sidebar')
+            @include('frontend.partials.sidebar')
 
         <!-- Content -->
         <div class="content">
             {{-- Header --}}
-            @include('fontend.partials.header')
+            @include('frontend.partials.header')
 
             {{-- Nội dung chính (demo) --}}
             <!-- Main -->
@@ -87,7 +87,7 @@
             </div>
 
             {{-- Footer --}}
-            @include('fontend.partials.footer')
+            @include('frontend.partials.footer')
         </div>
     </div>
 
@@ -105,8 +105,8 @@
         <p><b>Trạng thái:</b> <span class="status active">Còn hiệu lực</span></p>
         </div>
     </div>
-    <script src="{{ asset('fontend/js/contracts.js') }}"></script>
+    <script src="{{ asset('frontend/js/contracts.js') }}"></script>
 
-    <script src="{{ asset('fontend/js/script.js') }}"></script>
+    <script src="{{ asset('frontend/js/script.js') }}"></script>
 </body>
 </html>

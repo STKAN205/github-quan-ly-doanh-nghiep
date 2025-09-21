@@ -2,7 +2,7 @@
 <aside class="sidebar">
         <div class="logo">
             <a href="/trang-chu">
-                <img src="{{ asset('fontend/images/logoHR.png') }}" alt="Logo công ty">
+                <img src="{{ asset('frontend/images/logoHR.png') }}" alt="Logo công ty">
             </a>
         </div>
     <nav class="menu">

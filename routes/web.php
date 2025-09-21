@@ -7,37 +7,41 @@ Route::get('/trang-chu', function () {
 });
 
 Route::get('/employee', function () {
-    return view('fontend/employees/index');
+    return view('frontend/employees/index');
 });
 
 Route::get('/departments', function () {
-    return view('fontend/departments/index');
+    return view('frontend/departments/index');
 });
 
 Route::get('/attendance', function () {
-    return view('fontend/attendance/index');
+    return view('frontend/attendance/index');
 });
 
 Route::get('/salary', function () {
-    return view('fontend/salary/index');
+    return view('frontend/salary/index');
 });
 
 Route::get('/contracts', function () {
-    return view('fontend/contracts/index');
+    return view('frontend/contracts/index');
 });
 
 Route::get('/report', function () {
-    return view('fontend/reports/index');
+    return view('frontend/reports/index');
 });
 
 Route::get('/notifications', function () {
-    return view('fontend/notifications/index');
+    return view('frontend/notifications/index');
 });
 
 Route::get('/support', function () {
-    return view('fontend/support/index');
+    return view('frontend/support/index');
 });
 
 Route::get('/layouts', function () {
-    return view('fontend/layouts/layout');
+    return view('frontend/layouts/layout');
+});
+
+Route::get('/login', function () {
+    return view('frontend.auth.login'); // dùng dấu chấm thay vì /
 });

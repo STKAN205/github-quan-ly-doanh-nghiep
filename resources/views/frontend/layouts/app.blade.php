@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Website của tôi')</title>
-    <link rel="stylesheet" href="{{ asset('fontend/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/styles.css') }}">
 </head>
 <body>
     <div class="container">
@@ -25,6 +25,6 @@
         @include('partials.footer')
     </div>
 
-<script src="{{ asset('fontend/js/script.js') }}"></script>
+<script src="{{ asset('frontend/js/script.js') }}"></script>
 </body>
 </html>

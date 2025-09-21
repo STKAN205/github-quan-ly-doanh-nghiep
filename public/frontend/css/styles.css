@@ -143,3 +143,10 @@ body {
     color: #fff;
     font-weight: bold;
 }
+
+.user {
+    color: #fff;         /* màu chữ */
+    text-decoration: none; /* bỏ gạch chân */
+    cursor: pointer;     /* hiện bàn tay khi hover */
+    margin-left: 10px;
+}

@@ -5,6 +5,6 @@
     </div>
     <div class="user-actions">
         <span class="notif">🔔</span>
-        <span class="user">👤 Admin</span>
+        <a class="user" href="{{ url('/login') }}">👤 Admin</a>
     </div>
 </header>
