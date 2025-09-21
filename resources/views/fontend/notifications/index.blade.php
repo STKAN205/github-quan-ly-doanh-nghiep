@@ -9,38 +9,15 @@
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="logo">
-                <h2>HRM</h2>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="/employee">🧑‍💼 Quản lý nhân viên</a></li>
-                    <li><a href="/departments">🏢 Quản lý phòng ban & chức vụ</a></li>
-                    <li><a href="/attendance">⏱️ Quản lý chấm công</a></li>
-                    <li><a href="/salary">💰 Quản lý lương & thu nhập</a></li>
-                    <li><a href="/contracts">📄 Quản lý hợp đồng lao động</a></li>
-                    <li><a href="/report">📊 Quản lý báo cáo</a></li>
-                    <li><a href="/notifications">🔔 Quản lý thông báo</a></li>
-                    <li><a href="/support">🆘 Hỗ trợ</a></li>
-                </ul>
-            </nav>
-        </aside>
+        {{-- Sidebar --}}
+            @include('fontend.partials.sidebar')
 
         <!-- Content -->
         <div class="content">
-            <!-- Header -->
-            <header class="header">
-                <div class="search">
-                    <input type="text" placeholder="Tìm kiếm...">
-                </div>
-                <div class="user-actions">
-                    <span class="notif">🔔</span>
-                    <span class="user">👤 Admin</span>
-                </div>
-            </header>
+            {{-- Header --}}
+            @include('fontend.partials.header')
 
+            {{-- Nội dung chính (demo) --}}
             <!-- Main -->
             <div class="notification-container">
                 <h2>Quản lý thông báo</h2>
@@ -74,10 +51,10 @@
                 </table>
             </div>
 
-            <!-- Footer -->
-            <footer class="footer">
-                <p>© 2025 Hệ thống Quản lý Nhân sự | Version 1.0</p>
-            </footer>
+            {{-- Footer --}}
+            @include('fontend.partials.footer')
+        </div>
+    </div>
 
     <!-- Popup Chi tiết -->
     <div id="detailPopup" class="popup">
@@ -92,6 +69,7 @@
             </div>
         </div>
     </div>
+
     <!-- Popup Thêm/Sửa -->
     <div id="formPopup" class="popup">
         <div class="popup-content">
@@ -120,5 +98,6 @@
     </div>
 
     <script src="{{ asset('fontend/js/notifications.js') }}"></script>
+    <script src="{{ asset('fontend/js/script.js') }}"></script>
 </body>
 </html>

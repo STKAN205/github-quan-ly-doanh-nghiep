@@ -26,7 +26,7 @@ Route::get('/contracts', function () {
     return view('fontend/contracts/index');
 });
 
-Route::get('/reports', function () {
+Route::get('/report', function () {
     return view('fontend/reports/index');
 });
 
@@ -36,4 +36,8 @@ Route::get('/notifications', function () {
 
 Route::get('/support', function () {
     return view('fontend/support/index');
+});
+
+Route::get('/layouts', function () {
+    return view('fontend/layouts/layout');
 });

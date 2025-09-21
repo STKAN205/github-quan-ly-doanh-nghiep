@@ -9,89 +9,64 @@
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="logo" href="/trang-chu">
-                <h2>HRM</h2>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="/employee">🧑‍💼 Quản lý nhân viên</a></li>
-                    <li><a href="/departments">🏢 Quản lý phòng ban & chức vụ</a></li>
-                    <li><a href="/attendance">⏱️ Quản lý chấm công</a></li>
-                    <li><a href="/salary">💰 Quản lý lương & thu nhập</a></li>
-                    <li><a href="/contracts">📄 Quản lý hợp đồng lao động</a></li>
-                    <li><a href="/report">📊 Quản lý báo cáo</a></li>
-                    <li><a href="/notifications">🔔 Quản lý thông báo</a></li>
-                    <li><a href="/support">🆘 Hỗ trợ</a></li>
-                </ul>
-            </nav>
-        </aside>
+        {{-- Sidebar --}}
+            @include('fontend.partials.sidebar')
 
         <!-- Content -->
         <div class="content">
-            <!-- Header -->
-            <header class="header">
-                <div class="search">
-                    <input type="text" placeholder="Tìm kiếm...">
-                </div>
-                <div class="user-actions">
-                    <span class="notif">🔔</span>
-                    <span class="user">👤 Admin</span>
-                </div>
-            </header>
+            {{-- Header --}}
+            @include('fontend.partials.header')
 
-           <div class="employee-container">
+            {{-- Nội dung chính (demo) --}}
+                <div class="employee-container">
 
-            <!-- Thanh công cụ -->
-            <div class="employee-toolbar">
-                <button class="btn btn-add">+ Thêm nhân viên</button>
-                <input type="text" class="search-input" placeholder="Tìm kiếm nhân viên...">
+                <!-- Thanh công cụ -->
+                <div class="employee-toolbar">
+                    <button class="btn btn-add">+ Thêm nhân viên</button>
+                    <input type="text" class="search-input" placeholder="Tìm kiếm nhân viên...">
+                </div>
+
+                <!-- Bảng danh sách nhân viên -->
+                <table class="employee-table">
+                    <thead>
+                        <tr>
+                            <th>Mã NV</th>
+                            <th>Họ và Tên</th>
+                            <th>Phòng ban</th>
+                            <th>Chức vụ</th>
+                            <th>Email</th>
+                            <th>SĐT</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ví dụ dữ liệu -->
+                        <tr>
+                            <td>NV001</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>Kế toán</td>
+                            <td>Trưởng phòng</td>
+                            <td>a.nguyen@example.com</td>
+                            <td>0912345678</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>NV002</td>
+                            <td>Trần Thị B</td>
+                            <td>Nhân sự</td>
+                            <td>Nhân viên</td>
+                            <td>b.tran@example.com</td>
+                            <td>0987654321</td>
+                            <td></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Bảng danh sách nhân viên -->
-            <table class="employee-table">
-                <thead>
-                    <tr>
-                        <th>Mã NV</th>
-                        <th>Họ và Tên</th>
-                        <th>Phòng ban</th>
-                        <th>Chức vụ</th>
-                        <th>Email</th>
-                        <th>SĐT</th>
-                        <th>Thao tác</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Ví dụ dữ liệu -->
-                    <tr>
-                        <td>NV001</td>
-                        <td>Nguyễn Văn A</td>
-                        <td>Kế toán</td>
-                        <td>Trưởng phòng</td>
-                        <td>a.nguyen@example.com</td>
-                        <td>0912345678</td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>NV002</td>
-                        <td>Trần Thị B</td>
-                        <td>Nhân sự</td>
-                        <td>Nhân viên</td>
-                        <td>b.tran@example.com</td>
-                        <td>0987654321</td>
-                        <td></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
-
-            <!-- Footer -->
-            <footer class="footer">
-                <p>© 2025 Hệ thống Quản lý Nhân sự | Version 1.0</p>
-            </footer>
+            {{-- Footer --}}
+            @include('fontend.partials.footer')
         </div>
     </div>
 
@@ -109,6 +84,7 @@
         </div>
         <span class="close" onclick="closeModal()">&times;</span>
     </div>
+
     <script src="{{ asset('fontend/js/script.js') }}"></script>
     <script src="{{ asset('fontend/js/employee.js') }}"></script>
 </body>

@@ -3,56 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Hệ thống Quản lý nhân sự')</title>
-    <!-- CSS chung -->
+    <title>Hệ thống Quản lý Nhân sự</title>
     <link rel="stylesheet" href="{{ asset('fontend/css/styles.css') }}">
-    @stack('styles')
 </head>
 <body>
     <div class="container">
+        {{-- Sidebar --}}
+            @include('fontend.partials.sidebar')
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2>HRM System</h2>
-            <ul>
-                <li><a href="{{ url('/employee') }}">👨‍💼 Quản lý nhân viên</a></li>
-                <li><a href="{{ url('/department') }}">🏢 Quản lý phòng ban & chức vụ</a></li>
-                <li><a href="{{ url('/attendance') }}">🕒 Quản lý chấm công</a></li>
-                <li><a href="{{ url('/salary') }}">💰 Quản lý lương & thu nhập</a></li>
-                <li><a href="{{ url('/contract') }}">📑 Quản lý hợp đồng lao động</a></li>
-                <li><a href="{{ url('/report') }}">📊 Quản lý báo cáo</a></li>
-                <li><a href="{{ url('/notification') }}">🔔 Hệ thống thông báo</a></li>
-                <li><a href="{{ url('/support') }}">❓ Hỗ trợ</a></li>
-            </ul>
-        </aside>
+        <!-- Content -->
+        <div class="content">
+            {{-- Header --}}
+            @include('fontend.partials.header')
 
-        <!-- Nội dung bên phải -->
-        <div class="content-area">
-
-            <!-- Header -->
-            <header class="header">
-                <h1>@yield('title', 'Hệ thống Quản lý nhân sự')</h1>
-                <div class="user-info">
-                    <span>Xin chào, Admin</span>
-                    <a href="{{ url('/logout') }}" class="logout">Đăng xuất</a>
-                </div>
-            </header>
-
-            <!-- Main Content -->
+            {{-- Nội dung chính (demo) --}}
             <main class="main">
-                @yield('content')
+                <h2>Demo layout.blade.php</h2>
+                <p>Nếu bạn thấy được header, sidebar, footer thì tái sử dụng thành công 🎉</p>
             </main>
 
-            <!-- Footer -->
-            <footer class="footer">
-                <p>&copy; {{ date('Y') }} Hệ thống Quản lý nhân sự. All rights reserved.</p>
-            </footer>
-
+            {{-- Footer --}}
+            @include('fontend.partials.footer')
         </div>
     </div>
 
-    <!-- JS chung -->
     <script src="{{ asset('fontend/js/script.js') }}"></script>
-    @stack('scripts')
 </body>
 </html>
