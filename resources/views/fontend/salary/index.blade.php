@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ thống Quản lý Nhân sự</title>
     <link rel="stylesheet" href="{{ asset('fontend/css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontend/css/contracts.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontend/css/salary.css') }}">
 </head>
 <body>
     <div class="container">
@@ -42,65 +42,46 @@
             </header>
 
             <!-- Main -->
-            <div class="contract-container">
+            <div class="salary-container">
 
                 <!-- Toolbar -->
-                <div class="contract-toolbar">
-                <button class="btn btn-add">+ Thêm hợp đồng</button>
-                <input type="text" class="search-input" placeholder="Tìm kiếm hợp đồng...">
+                <div class="salary-toolbar">
+                <button class="btn btn-add">+ Thêm bảng lương</button>
+                <input type="text" class="search-input" placeholder="Tìm kiếm nhân viên...">
                 <select class="filter-select">
-                    <option>Tất cả loại hợp đồng</option>
-                    <option>Thử việc</option>
-                    <option>Chính thức</option>
-                    <option>Thời vụ</option>
-                </select>
-                <select class="filter-select">
-                    <option>Tất cả trạng thái</option>
-                    <option>Còn hiệu lực</option>
-                    <option>Sắp hết hạn</option>
-                    <option>Hết hạn</option>
+                    <option>Tháng 9/2025</option>
+                    <option>Tháng 8/2025</option>
+                    <option>Tháng 7/2025</option>
                 </select>
                 </div>
 
-                <!-- Contract Table -->
-                <table class="contract-table">
+                <!-- Salary Table -->
+                <table class="salary-table">
                 <thead>
                     <tr>
-                    <th>Số HĐ</th>
                     <th>Mã NV</th>
                     <th>Họ và Tên</th>
-                    <th>Loại hợp đồng</th>
-                    <th>Ngày bắt đầu</th>
-                    <th>Ngày kết thúc</th>
-                    <th>Trạng thái</th>
+                    <th>Phòng ban</th>
+                    <th>Lương cơ bản</th>
+                    <th>Phụ cấp</th>
+                    <th>Thưởng</th>
+                    <th>Khấu trừ</th>
+                    <th>Tổng nhận</th>
                     <th>Thao tác</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    <td>HD001</td>
                     <td>NV001</td>
                     <td>Nguyễn Văn A</td>
-                    <td>Chính thức</td>
-                    <td>01/01/2024</td>
-                    <td>31/12/2025</td>
-                    <td><span class="status active">Còn hiệu lực</span></td>
+                    <td>Kế toán</td>
+                    <td>10,000,000</td>
+                    <td>2,000,000</td>
+                    <td>1,000,000</td>
+                    <td>1,500,000</td>
+                    <td>11,500,000</td>
                     <td>
                         <button class="btn btn-view" onclick="openPopup('Nguyễn Văn A')">Xem</button>
-                        <button class="btn btn-edit">Sửa</button>
-                        <button class="btn btn-delete">Xóa</button>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>HD002</td>
-                    <td>NV002</td>
-                    <td>Trần Thị B</td>
-                    <td>Thử việc</td>
-                    <td>01/08/2025</td>
-                    <td>31/10/2025</td>
-                    <td><span class="status warning">Sắp hết hạn</span></td>
-                    <td>
-                        <button class="btn btn-view" onclick="openPopup('Trần Thị B')">Xem</button>
                         <button class="btn btn-edit">Sửa</button>
                         <button class="btn btn-delete">Xóa</button>
                     </td>
@@ -120,17 +101,18 @@
     <div class="popup" id="popup">
         <div class="popup-content">
         <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Chi tiết hợp đồng</h2>
+        <h2>Chi tiết lương</h2>
         <p><b>Nhân viên:</b> <span id="popup-name"></span></p>
-        <p><b>Số HĐ:</b> HD001</p>
-        <p><b>Ngày ký:</b> 01/01/2024</p>
-        <p><b>Loại hợp đồng:</b> Chính thức</p>
-        <p><b>Thời hạn:</b> 24 tháng</p>
-        <p><b>Điều khoản chính:</b> Nhân viên cam kết tuân thủ nội quy công ty và thực hiện công việc theo mô tả.</p>
-        <p><b>Trạng thái:</b> <span class="status active">Còn hiệu lực</span></p>
+        <table class="popup-table">
+            <tr><td>Lương cơ bản</td><td>10,000,000</td></tr>
+            <tr><td>Phụ cấp</td><td>2,000,000</td></tr>
+            <tr><td>Thưởng</td><td>1,000,000</td></tr>
+            <tr><td>Khấu trừ</td><td>1,500,000</td></tr>
+            <tr class="highlight"><td>Tổng thực nhận</td><td>11,500,000</td></tr>
+        </table>
         </div>
     </div>
-    <script src="{{ asset('fontend/js/contracts.js') }}"></script>
-
+    
+    <script src="{{ asset('fontend/js/salary.js') }}"></script>
 </body>
 </html>

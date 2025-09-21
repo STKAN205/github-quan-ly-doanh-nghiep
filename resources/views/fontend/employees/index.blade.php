@@ -11,19 +11,19 @@
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="logo">
+            <div class="logo" href="/trang-chu">
                 <h2>HRM</h2>
             </div>
             <nav class="menu">
                 <ul>
                     <li><a href="/employee">🧑‍💼 Quản lý nhân viên</a></li>
-                    <li><a href="#">🏢 Quản lý phòng ban & chức vụ</a></li>
-                    <li><a href="#">⏱️ Quản lý chấm công</a></li>
-                    <li><a href="#">💰 Quản lý lương & thu nhập</a></li>
-                    <li><a href="#">📄 Quản lý hợp đồng lao động</a></li>
-                    <li><a href="#">📊 Quản lý báo cáo</a></li>
-                    <li><a href="#">🔔 Quản lý thông báo</a></li>
-                    <li><a href="#">🆘 Hỗ trợ</a></li>
+                    <li><a href="/departments">🏢 Quản lý phòng ban & chức vụ</a></li>
+                    <li><a href="/attendance">⏱️ Quản lý chấm công</a></li>
+                    <li><a href="/salary">💰 Quản lý lương & thu nhập</a></li>
+                    <li><a href="/contracts">📄 Quản lý hợp đồng lao động</a></li>
+                    <li><a href="/report">📊 Quản lý báo cáo</a></li>
+                    <li><a href="/notifications">🔔 Quản lý thông báo</a></li>
+                    <li><a href="/support">🆘 Hỗ trợ</a></li>
                 </ul>
             </nav>
         </aside>
