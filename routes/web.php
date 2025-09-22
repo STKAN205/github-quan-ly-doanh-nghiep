@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+// routes/web.php
+use App\Http\Controllers\EmployeeController;
+
 
 Route::get('/trang-chu', function () {
     return view('index');
@@ -43,5 +47,16 @@ Route::get('/layouts', function () {
 });
 
 Route::get('/login', function () {
-    return view('frontend.auth.login'); // dùng dấu chấm thay vì /
+    return view('frontend.auth.login'); 
+})->name('login');
+
+Route::get('/users', function () {
+    return view('frontend.users.index'); 
 });
+
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.post');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');

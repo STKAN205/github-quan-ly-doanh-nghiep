@@ -90,14 +90,6 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <!-- Thống kê nhanh -->
-                <div class="attendance-summary">
-                    <p><strong>Tổng ngày làm:</strong> 20</p>
-                    <p><strong>Ngày nghỉ phép:</strong> 2</p>
-                    <p><strong>Số ngày đi trễ:</strong> 1</p>
-                    <p><strong>Tổng giờ tăng ca:</strong> 5h</p>
-                </div>
             </div>
 
             {{-- Footer --}}

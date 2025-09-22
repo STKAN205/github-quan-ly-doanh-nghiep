@@ -50,17 +50,6 @@
                             <td>0912345678</td>
                             <td></td>
                         </tr>
-
-                        <tr>
-                            <td>NV002</td>
-                            <td>Trần Thị B</td>
-                            <td>Nhân sự</td>
-                            <td>Nhân viên</td>
-                            <td>b.tran@example.com</td>
-                            <td>0987654321</td>
-                            <td></td>
-                        </tr>
-                        
                     </tbody>
                 </table>
             </div>
